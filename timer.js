@@ -10,7 +10,7 @@ class Timer {
   start(callback) {
     this.intervalID = setInterval(() => {
       this.time = this.time + 1;
-      updateTime();
+      updateTime(); //callback update
     }, 1000);
   }
 

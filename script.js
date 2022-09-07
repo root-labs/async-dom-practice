@@ -15,7 +15,7 @@ function updateTime() {
 startBtn.addEventListener("click", () => {
   // Call the timer start method
   timeObj.start();
-  updateTime();
+  updateTime(); //callback
 });
 
 stopBtn.addEventListener("click", () => {
