@@ -1,22 +1,24 @@
-let startBtn = document.querySelector('#start')
-let stopBtn = document.querySelector('#stop')
-let timeDOM = document.querySelector('#timer')
-
+let startBtn = document.querySelector("#start");
+let stopBtn = document.querySelector("#stop");
+let timeDOM = document.querySelector("#timer");
 
 // STEP 3: Create an object from the timer class
 
-function updateTime(){
-   // update the time DOM here
-   // console.log('Here')
-    
+let timeObj = new Timer();
+
+function updateTime() {
+  // update the time DOM here
+  // console.log('Here')
+  timeDOM.textContent = timeObj.time;
 }
 
+startBtn.addEventListener("click", () => {
+  // Call the timer start method
+  timeObj.start();
+  updateTime(); //callback
+});
 
-startBtn.addEventListener('click', () => {
-    // Call the timer start method
-})
-
-
-stopBtn.addEventListener('click', () => {
-    // Call the timer stop method
-})
+stopBtn.addEventListener("click", () => {
+  // Call the timer stop method
+  timeObj.stop();
+});
